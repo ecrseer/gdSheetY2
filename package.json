@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "np":"git add . && git commit -m 'depploytest' && git push origin main "
+
   },
   "dependencies": {
     "@material-ui/core": "^4.11.2",

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-let bsURL =  process.env.MY_SHEET?
-    process.env.MY_SHEET :
+let bsURL =  process.env.URLTEST?
+    process.env.URLTEST :
     "http://localhost:5000/arquivo"; 
    
  ;
