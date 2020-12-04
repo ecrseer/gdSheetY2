@@ -1,18 +1,8 @@
 import Head from 'next/head'
 import DenseTable from '../src/components/tabela/denseTable'
 import { useEffect, useState } from 'react';
-import {myDriver} from '../api';
-async function handleProcurai(eventoSb){
-    eventoSb.preventDefault();
-       const jsnm = {    nomezin}
-       try{        
-           const rsultado = await myDriver.post('/',jsnm);
-           console.log(rsultado.data.meuArray);
-           setLista(rsultado.data);
-       }catch(er){
-           console.log('Erow'+er);
-       }
-   }
+import myDriver from '../api';
+
 export default function indX2() {
     const [nomezin,setNomezin] = useState('inicial');
     const [lista,setLista] = useState(
@@ -25,6 +15,18 @@ export default function indX2() {
         }
         
         )
+        async function handleProcurai(eventoSb){
+            eventoSb.preventDefault();
+               const jsnm = {    nomezin}
+               try{        
+                   const rsultado = await myDriver.post('/',jsnm);
+                   console.log(rsultado.data.meuArray);
+                   setLista(rsultado.data);
+               }catch(er){
+                   console.log('Erow'+er);
+               }
+           }
+
     return(
   <>
     <Head>
