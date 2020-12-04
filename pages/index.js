@@ -16,15 +16,15 @@ export default function indX2() {
         
         )
         useEffect(()=>{setTimeout(()=>{
-            console.log(process.env.URLTEST)},1000)
+           
         },[])
-        
+
         async function handleProcurai(eventoSb){
             eventoSb.preventDefault();
                const jsnm = {    nomezin}
                try{        
                    const rsultado = await myDriver.post('/',jsnm);
-                   console.log(process.env.MY_SHEET);
+                   
                    
                    setLista(rsultado.data);
                }catch(er){
