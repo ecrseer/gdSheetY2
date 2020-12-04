@@ -30,7 +30,7 @@ export default function indX2() {
     return(
   <>
     <Head>
-      <title>tabela</title>
+      <title>tabela do gabriel</title>
     </Head>
     <h2>gdSheet - minha tabela excel</h2>
     
