@@ -8,9 +8,9 @@ export default function indX2() {
     const [lista,setLista] = useState(
         {
             "meuArray":[
-                ['bem','vindo'],
-        ['oi','td','b'],
-        ['sim','e']
+        ['bem','vindo','3','7'],
+        ['1','2','3','7'],
+        ['4','5','6','8']
         ]
         }
         
