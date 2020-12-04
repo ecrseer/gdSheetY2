@@ -6,6 +6,7 @@
 
 ## Para testar : 
 Acesse  <a href="https://gd-sheet-y2.vercel.app/">o site do deploy</a> e pesquise "Brasil"
+Olhe a <a href="https://drive.google.com/file/d/194t1ptGWmjV1uDGqepXUZhiEUAgnr8D9/view?usp=sharing">tabela no google drive</a>
 
 ## Para usar de modelo para projetos:
 
