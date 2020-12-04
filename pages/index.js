@@ -15,8 +15,8 @@ export default function indX2() {
         }
         
         )
-        useEffect(()=>{
-            console.log(process.env.MY_SHEET)
+        useEffect(()=>{setTimeout(()=>{
+            console.log(process.env.MY_SHEET)},1000)
         },[])
         async function handleProcurai(eventoSb){
             eventoSb.preventDefault();
