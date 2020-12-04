@@ -15,6 +15,9 @@ export default function indX2() {
         }
         
         )
+        useEffect(()=>{
+            console.log(process.env.MY_SHEET)
+        },[])
         async function handleProcurai(eventoSb){
             eventoSb.preventDefault();
                const jsnm = {    nomezin}
