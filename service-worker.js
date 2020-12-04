@@ -4,6 +4,11 @@ import { NetworkOnly, NetworkFirst, CacheFirst, StaleWhileRevalidate } from 'wor
 import { registerRoute, setDefaultHandler, setCatchHandler } from 'workbox-routing'
 import { matchPrecache, precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching'
 
+//post background sync
+import {BackgroundSyncPlugin} from 'workbox-background-sync';
+//import {registerRoute} from 'workbox-routing';
+
+
 skipWaiting()
 clientsClaim()
 
@@ -134,3 +139,14 @@ setCatchHandler(({ event }) => {
       return Response.error()
   }
 })
+//post background sync
+const bgSyncPlugin = new BackgroundSyncPlugin('myQueueName', {
+    maxRetentionTime: 24 * 60 // Retry for max of 24 Hours (specified in minutes)
+  });
+  registerRoute(
+    /\/api\/.*\/*.json/,
+    new NetworkOnly({
+      plugins: [bgSyncPlugin]
+    }),
+    'POST'
+  );
