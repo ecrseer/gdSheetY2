@@ -20,7 +20,7 @@ export default function indX2() {
                const jsnm = {    nomezin}
                try{        
                    const rsultado = await myDriver.post('/',jsnm);
-                   console.log(rsultado.data.meuArray);
+                   console.log(process.env.MY_SHEET);
                    setLista(rsultado.data);
                }catch(er){
                    console.log('Erow'+er);
