@@ -17,7 +17,8 @@ export default function indX2() {
         )
         useEffect(()=>{setTimeout(()=>{
            
-        },[])
+        }
+    },[])
 
         async function handleProcurai(eventoSb){
             eventoSb.preventDefault();
