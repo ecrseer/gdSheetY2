@@ -24,6 +24,7 @@ export default function indX2() {
                try{        
                    const rsultado = await myDriver.post('/',jsnm);
                    console.log(process.env.MY_SHEET);
+                   
                    setLista(rsultado.data);
                }catch(er){
                    console.log('Erow'+er);
