@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import DenseTable from '../src/components/tabela/denseTable'
 import { useEffect, useState } from 'react';
-import {myDriver} from './api';
+import {myDriver} from '../api';
 async function handleProcurai(eventoSb){
     eventoSb.preventDefault();
        const jsnm = {    nomezin}
