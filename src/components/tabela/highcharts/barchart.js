@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { render } from 'react-dom';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
@@ -8,7 +8,7 @@ const options = {
       type: 'spline'
     },
     title: {
-      text: 'Total da pesquisa'
+      text: 'Totais'
     },
     series: [
       {
@@ -16,16 +16,19 @@ const options = {
       }
     ]
   };
-
   const SplineChart = ({dados}) => {
-      
-      options.series = [{data:dados.meuArray.map(
-        row=>row[4])
-    }]
+      let newoptions = options;
+      let arr = dados.meuArray.map(
+        row=>row[4]);
+
+      useEffect(()=>{
+        newoptions.series = [{data: arr
+        }]
+      },[dados])
     return(
     <div>
-      <HighchartsReact highcharts={Highcharts} options={options} />
-      
+      <HighchartsReact highcharts={Highcharts} options={newoptions} />      
+      <h1>{newoptions.series[0].data}</h1>
     </div>
   )};
   export default SplineChart;

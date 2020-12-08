@@ -3,14 +3,13 @@ import DenseTable from '../src/components/tabela/denseTable'
 import { useEffect, useState } from 'react';
 import myDriver from '../api';
 import SplineChart from '../src/components/tabela/highcharts/barchart';
+import styl from '../src/styles/cindex.module.css';
+
 export default function indX2() {
     const [nomezin,setNomezin] = useState('inicial');
     const [lista,setLista] = useState(
         {
             "meuArray":[
-        ['bem','vindo','3','7'],
-        ['1','2','3','7'],
-        ['4','5','6','8']
         ]
         }
         
@@ -21,9 +20,7 @@ export default function indX2() {
             eventoSb.preventDefault();
                const jsnm = {    nomezin}
                try{        
-                   const rsultado = await myDriver.post('/',jsnm);
-                   
-                   
+                   const rsultado = await myDriver.post('/',jsnm);             
                    setLista(rsultado.data);
                }catch(er){
                    console.log('Erow'+er);
@@ -37,7 +34,8 @@ export default function indX2() {
     </Head>
     <h2>gdSheet - minha tabela excel</h2>
     <h6><a href="https://drive.google.com/file/d/194t1ptGWmjV1uDGqepXUZhiEUAgnr8D9/view?usp=sharing">Clique aqui</a> para visualizar a tabela no google drive</h6>
-    <div>
+   
+    <div className={styl.forme} style={{backgroundColor:"black"}}>
     <form onSubmit={handleProcurai}>
         <input placeholder="pesquisa" type="text" value={nomezin}
             onChange={txt=>setNomezin(txt.target.value)}/>
