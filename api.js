@@ -5,7 +5,7 @@ let bsURL =  process.env.URLTEST?
     
     "http://localhost:5000/arquivo"; 
    
- ;
+ 
 
 let axconfig = { 
     baseURL:bsURL

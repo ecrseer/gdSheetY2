@@ -1,5 +1,5 @@
 {
-  "name": "next-pwa-example",
+  "name": "gdsheety2",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,12 +8,13 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "np":"git add . && git commit -m 'depploytest' && git push origin main "
-
+    "np": "git add . && git commit -m 'depploytest' && git push origin main "
   },
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "axios": "^0.21.0",
+    "highcharts": "^8.2.2",
+    "highcharts-react-official": "^3.0.0",
     "next": "^10.0.1",
     "next-pwa": "latest",
     "react": "^17.0.1",

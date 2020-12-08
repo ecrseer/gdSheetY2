@@ -2,7 +2,7 @@ import Head from 'next/head'
 import DenseTable from '../src/components/tabela/denseTable'
 import { useEffect, useState } from 'react';
 import myDriver from '../api';
-
+import SplineChart from '../src/components/tabela/highcharts/barchart';
 export default function indX2() {
     const [nomezin,setNomezin] = useState('inicial');
     const [lista,setLista] = useState(
@@ -47,8 +47,11 @@ export default function indX2() {
      {lista?<DenseTable arrai={lista}/>: <h6>não encontrei nada poxa :(</h6>}
      
     </div>
-
-
+    {lista?
+    <SplineChart dados={lista}/>
+    :
+    <SplineChart />
+    }
   </>
 )
 }
