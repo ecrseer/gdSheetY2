@@ -18,9 +18,10 @@ export default function indX2() {
 
         async function handleProcurai(eventoSb){
             eventoSb.preventDefault();
-               const jsnm = {    nomezin}
+            let nomezi  = nomezin+"";
                try{        
-                   const rsultado = await myDriver.post('/',jsnm);             
+                   const rsultado = await myDriver.get('/'+nomezi);   
+                   console.log(rsultado.data)          
                    setLista(rsultado.data);
                }catch(er){
                    console.log('Erow'+er);
@@ -30,6 +31,7 @@ export default function indX2() {
     return(
   <>
     <Head>
+    
       <title>tabela do gabriel</title>
     </Head>
     <h2>gdSheet - minha tabela excel</h2>

@@ -148,5 +148,5 @@ const bgSyncPlugin = new BackgroundSyncPlugin('myQueueName', {
     new NetworkOnly({
       plugins: [bgSyncPlugin]
     }),
-    'POST'
+    'GET'
   );

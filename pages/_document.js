@@ -12,6 +12,8 @@ export default class extends Document {
     return (
       <Html lang='en' dir='ltr'>
         <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"></link>
           <meta name='application-name' content={APP_NAME} />
           <meta name='apple-mobile-web-app-capable' content='yes' />
           <meta name='apple-mobile-web-app-status-bar-style' content='default' />
