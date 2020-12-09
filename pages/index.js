@@ -21,7 +21,7 @@ export default function indX2() {
             let nomezi  = nomezin+"";
                try{        
                    const rsultado = await myDriver.get('/'+nomezi);   
-                   console.log(rsultado.data)          
+                          
                    setLista(rsultado.data);
                }catch(er){
                    console.log('Erow'+er);
