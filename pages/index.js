@@ -9,8 +9,7 @@ export default function indX2() {
     const [nomezin,setNomezin] = useState('inicial');
     const [lista,setLista] = useState(
         {
-            "meuArray":[
-        ]
+            "meuArray":[0]
         }
         
         )
@@ -36,7 +35,7 @@ export default function indX2() {
     </Head>
     <h2>gdSheet - minha tabela excel</h2>
     <h6><a href="https://drive.google.com/file/d/194t1ptGWmjV1uDGqepXUZhiEUAgnr8D9/view?usp=sharing">Clique aqui</a> para visualizar a tabela no google drive</h6>
-   
+
     <div className={styl.forme} style={{backgroundColor:"black"}}>
     <form onSubmit={handleProcurai}>
         <input placeholder="pesquisa" type="text" value={nomezin}

@@ -1,9 +1,11 @@
 import axios from 'axios';
 
+let secondURL= process.env.local_TO_HEROKU?process.env.local_TO_HEROKU
+:"http://localhost:5000/arquivo";
+
 let bsURL =  process.env.URLTEST?
     process.env.URLTEST :
-    
-    "http://localhost:5000/arquivo"; 
+    secondURL; 
    
  ;
 

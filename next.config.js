@@ -6,6 +6,7 @@ module.exports = withPWA({
     swSrc: 'service-worker.js'
   },
   env:{
-      URLTEST: process.env.URLTEST
+      URLTEST: process.env.URLTEST,
+      local_TO_HEROKU: process.env.local_TO_HEROKU
   }
 })
