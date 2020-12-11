@@ -26,10 +26,11 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export default function DenseTable({arrai}) {
+export default function DenseTable({arrai,carreg}) {
   const classes = useStyles();
-
+  
   return (
+    !carreg?
     <TableContainer component={Paper}>
       <Table className={classes.table} size="small" aria-label="a dense table">
         <TableHead>
@@ -58,5 +59,6 @@ export default function DenseTable({arrai}) {
         </TableBody>
       </Table>
     </TableContainer>
+  : <h1>nadanada</h1>
   );
 }

@@ -10,18 +10,20 @@ export default function indX2() {
     const [lista,setLista] = useState(
         {
             "meuArray":[0]
-        }
-        
+        } 
         )
+    const [carreg,setCarreg] = useState(false)
         
 
         async function handleProcurai(eventoSb){
             eventoSb.preventDefault();
+            setCarreg(true);
             let nomezi  = nomezin+"";
                try{        
                    const rsultado = await myDriver.get('/'+nomezi);   
                           
                    setLista(rsultado.data);
+                   setCarreg(false);
                }catch(er){
                    console.log('Erow'+er);
                }
@@ -43,7 +45,7 @@ export default function indX2() {
         <button className="button" type="submit">procurai</button>
     </form>
     
-     {lista?<DenseTable arrai={lista}/>: <h6>não encontrei nada poxa :(</h6>}
+     {lista?<DenseTable arrai={lista} carreg={carreg}/>: <h6>não encontrei nada poxa :(</h6>}
      
     </div>
     {lista?
