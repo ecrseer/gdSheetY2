@@ -59,6 +59,6 @@ export default function DenseTable({arrai,carreg}) {
         </TableBody>
       </Table>
     </TableContainer>
-  : <h1>nadanada</h1>
+  : <h1>Carregando dados...</h1>
   );
 }
