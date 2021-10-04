@@ -35,8 +35,8 @@ export default function indX2() {
     
       <title>tabela do gabriel</title>
     </Head>
-    <h2>gdSheet - minha tabela excel</h2>
-    <h6><a href="https://drive.google.com/file/d/194t1ptGWmjV1uDGqepXUZhiEUAgnr8D9/view?usp=sharing">Clique aqui</a> para visualizar a tabela no google drive</h6>
+    <h2><p>gdSheet</p> - Tabela google sheet como API</h2>
+    <h3><a href="https://drive.google.com/file/d/194t1ptGWmjV1uDGqepXUZhiEUAgnr8D9/view?usp=sharing">Clique aqui</a> E adicione/edite itens na tabela do google drive</h3>
 
     <div className={styl.forme} style={{backgroundColor:"black"}}>
     <form onSubmit={handleProcurai}>
